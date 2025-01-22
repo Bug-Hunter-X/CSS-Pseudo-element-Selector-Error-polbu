@@ -1,0 +1,9 @@
+The solution is simple:  always use the double colon (`::`) to define pseudo-elements. The corrected code is:
+
+```css
+.element::before {
+  content: "Before";
+}
+```
+
+This ensures the correct styling and behavior, avoiding potential browser inconsistencies and future compatibility problems.  Using the single colon might not always cause an error, but it's an incorrect and potentially problematic practice.

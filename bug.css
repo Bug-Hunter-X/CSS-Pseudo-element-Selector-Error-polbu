@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates an uncommon error that is difficult to debug. The error involves using a pseudo-class selector with a syntax that is not well-defined in CSS, leading to unexpected behavior.
+
+```css
+.element::before { /* Correct */
+  content: "Before";
+}
+
+.element:before { /* Incorrect */
+  content: "Incorrect Before";
+}
+```
+
+The incorrect usage, `.element:before`, should instead be `.element::before`.  While some older browsers may render this incorrectly without reporting an error, it can lead to problems with specificity and might break in future browsers or CSS updates.  The correct usage uses the double colon (`::`) to ensure the pseudo-element is clearly defined.
